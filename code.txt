@@ -1,0 +1,129 @@
+Microsoft Windows [Version 10.0.22631.4037]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\ss>git clone https://github.com/abdallasamir04/samir.git
+Cloning into 'samir'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+E:\ss>git log
+fatal: not a git repository (or any of the parent directories): .git
+
+E:\ss>cd samir
+
+E:\ss\samir>git log
+commit 799c1ca4e5d1a960d9c226bba2742066982affea (HEAD -> main, origin/main, origin/HEAD)
+Author: Abdalla Mahmoud Samir <126839744+abdallasamir04@users.noreply.github.com>
+Date:   Sun Nov 3 23:26:22 2024 -0800
+
+    Create abdo.txt
+
+E:\ss\samir>git remote
+origin
+
+E:\ss\samir>git remote -v
+origin  https://github.com/abdallasamir04/samir.git (fetch)
+origin  https://github.com/abdallasamir04/samir.git (push)
+
+E:\ss\samir>git push origin
+Everything up-to-date
+
+E:\ss\samir>git push origin
+Everything up-to-date
+
+E:\ss\samir>git add aa.txt
+
+E:\ss\samir>git commit -m " Session 1 "
+[main 6c0ab5e]  Session 1
+ 1 file changed, 139 insertions(+)
+ create mode 100644 aa.txt
+
+E:\ss\samir>git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.34 KiB | 228.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/abdallasamir04/samir.git
+   799c1ca..6c0ab5e  main -> main
+
+E:\ss\samir>git log
+commit 6c0ab5e17d3c1db469b07e7b50b2211a5c417a0a (HEAD -> main, origin/main, origin/HEAD)
+Author: John Doe <johndoe@example.com>
+Date:   Sun Nov 3 23:43:20 2024 -0800
+
+     Session 1
+
+commit 799c1ca4e5d1a960d9c226bba2742066982affea
+Author: Abdalla Mahmoud Samir <126839744+abdallasamir04@users.noreply.github.com>
+Date:   Sun Nov 3 23:26:22 2024 -0800
+
+    Create abdo.txt
+
+E:\ss\samir>git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 3.00 KiB | 13.00 KiB/s, done.
+From https://github.com/abdallasamir04/samir
+   6c0ab5e..d8c6ac9  main       -> origin/main
+Updating 6c0ab5e..d8c6ac9
+Fast-forward
+ section-Sw.txt | 340 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 340 insertions(+)
+ create mode 100644 section-Sw.txt
+
+E:\ss\samir>git log --all --graph
+*   commit d8c6ac9638bbe9c79f740d5703d788bb7905895d (HEAD -> main, origin/main, origin/HEAD)
+|\  Merge: 8d32f90 6c0ab5e
+| | Author: omar <muhammad@email.com>
+| | Date:   Mon Nov 4 09:49:55 2024 +0200
+| |
+| |     Merge branch 'main' of https://github.com/abdallasamir04/samir
+| |
+| * commit 6c0ab5e17d3c1db469b07e7b50b2211a5c417a0a
+| | Author: John Doe <johndoe@example.com>
+| | Date:   Sun Nov 3 23:43:20 2024 -0800
+| |
+| |      Session 1
+| |
+* | commit 8d32f9022de37bfdcc2c9586669643e80833e7de
+|/  Author: omar <muhammad@email.com>
+|   Date:   Mon Nov 4 09:43:33 2024 +0200
+|
+|       all commands here in
+|
+* commit 799c1ca4e5d1a960d9c226bba2742066982affea
+  Author: Abdalla Mahmoud Samir <126839744+abdallasamir04@users.noreply.github.com>
+  Date:   Sun Nov 3 23:26:22 2024 -0800
+
+      Create abdo.txt
+
+E:\ss\samir>git pull
+Already up to date.
+
+E:\ss\samir>git add abdo.txt
+
+E:\ss\samir>git commit -m "sssss"
+[main 62cfde6] sssss
+ 1 file changed, 2 insertions(+)
+
+E:\ss\samir>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/abdallasamir04/samir.git
+   d8c6ac9..62cfde6  main -> main
+
+E:\ss\samir>git
+
+
+
+
