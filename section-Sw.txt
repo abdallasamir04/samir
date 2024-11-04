@@ -1,0 +1,340 @@
+
+User@Admin MINGW64 ~ (master|MERGING)
+$ cd F:\loving-git
+
+User@Admin MINGW64 /f/loving-git
+$ help
+GNU bash, version 5.2.37(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                            history [-c] [-d offset] [n] or hist>
+ (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>
+ . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >
+ :                                       kill [-s sigspec | -n signum | -sigs>
+ [ arg... ]                              let arg [arg ...]
+ [[ expression ]]                        local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]          logout [n]
+ bg [job_spec ...]                       mapfile [-d delim] [-n count] [-O or>
+ bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]
+ break [n]                               printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]
+ caller [expr]                           pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
+ cd [-L|[-P [-e]] [-@]] [dir]            readarray [-d delim] [-n count] [-O >
+ command [-pVv] command [arg ...]        readonly [-aAf] [name[=value] ...] o>
+ compgen [-abcdefgjksuv] [-o option] [>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DEI]>  select NAME [in WORDS ... ;] do COMM>
+ compopt [-o|+o option] [-DEI] [name .>  set [-abefhkmnptuvxBCEHPT] [-o optio>
+ continue [n]                            shift [n]
+ coproc [NAME] command [redirections]    shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgiIlnrtux] [name[=value>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                  suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid >  test [expr]
+ echo [-neE] [arg ...]                   time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [na>  times
+ eval [arg ...]                          trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argume>  true
+ exit [n]                                type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or ex>  typeset [-aAfFgiIlnrtux] name[=value>
+ false                                   ulimit [-SHabcdefiklmnpqrstuvxPRT] [>
+ fc [-e ename] [-lnr] [first] [last] o>  umask [-p] [-S] [mode]
+ fg [job_spec]                           unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMAND>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMAN>  until COMMANDS; do COMMANDS-2; done
+ function name { COMMANDS ; } or name >  variables - Names and meanings of so>
+ getopts optstring name [arg ...]        wait [-fn] [-p var] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name >  while COMMANDS; do COMMANDS-2; done
+ help [-dms] [pattern ...]               { COMMANDS ; }
+
+User@Admin MINGW64 /f/loving-git
+$ git init
+Initialized empty Git repository in F:/loving-git/.git/
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git config
+error: no action specified
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tribute.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git config --global user.name
+muhammad
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git config --global user.name omar
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git config --global email.name omar@gmail.com
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tribute.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git commit tribute.md "A. "
+error: pathspec 'tribute.md' did not match any file(s) known to git
+error: pathspec 'A. ' did not match any file(s) known to git
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tribute.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git add tribute.md
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   tribute.md
+
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git commit "A "
+error: pathspec 'A ' did not match any file(s) known to git
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git commit A
+error: pathspec 'A' did not match any file(s) known to git
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git commit -m "A"
+[master (root-commit) 8688d81] A
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tribute.md
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git branch
+* master
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git branch improvisation
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git branch improvisation
+fatal: a branch named 'improvisation' already exists
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git branch
+  improvisation
+* master
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git swtich improvisation
+git: 'swtich' is not a git command. See 'git --help'.
+
+The most similar command is
+        switch
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git switch improvisation
+Switched to branch 'improvisation'
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git status
+On branch improvisation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   tribute.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git branch
+* improvisation
+  master
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git commit -m "B"
+On branch improvisation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   tribute.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git add tribute.md
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git commit -m "B"
+[improvisation 88e3eab] B
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git status
+On branch improvisation
+nothing to commit, working tree clean
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git branch
+* improvisation
+  master
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git branch master
+fatal: a branch named 'master' already exists
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git switch master
+Switched to branch 'master'
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git switch improvisation
+Switched to branch 'improvisation'
+
+User@Admin MINGW64 /f/loving-git (improvisation)
+$ git switch master
+Switched to branch 'master'
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git add tribute.md
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git commit -m "C"
+[master e90f0ce] C
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+User@Admin MINGW64 /f/loving-git (master)
+$ git merge improvisation
+Auto-merging tribute.md
+CONFLICT (content): Merge conflict in tribute.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@Admin MINGW64 /f/loving-git (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+*   commit dc44b5a84791f1779f894dee8cecbe1088ad6564 (HEAD -> master)
+|\  Merge: e90f0ce 88e3eab
+| | Author: omar <muhammad@email.com>
+| | Date:   Mon Nov 4 09:18:06 2024 +0200
+| |
+| |     Merge branch 'improvisation'
+| |
+| * commit 88e3eab11212176e892bd9ed6465298b5a9b85b8 (improvisation)
+| | Author: omar <muhammad@email.com>
+| | Date:   Mon Nov 4 08:56:40 2024 +0200
+| |
+| |     B
+| |
+* | commit e90f0ce4aea5732fc26c2c89892ecd1e6be815ba
+|/  Author: omar <muhammad@email.com>
+|   Date:   Mon Nov 4 09:06:14 2024 +0200
+|
+|       C
+|
+* commit 8688d81c1c1c0ec21dc5eb6e89aad28da8620479
+  Author: omar <muhammad@email.com>
+  Date:   Mon Nov 4 08:51:08 2024 +0200
+
+:...skipping...
+*   commit dc44b5a84791f1779f894dee8cecbe1088ad6564 (HEAD -> master)
+|\  Merge: e90f0ce 88e3eab
+| | Author: omar <muhammad@email.com>
+| | Date:   Mon Nov 4 09:18:06 2024 +0200
+| |
+| |     Merge branch 'improvisation'
+| |
+| * commit 88e3eab11212176e892bd9ed6465298b5a9b85b8 (improvisation)
+| | Author: omar <muhammad@email.com>
+| | Date:   Mon Nov 4 08:56:40 2024 +0200
+| |
+| |     B
+| |
+* | commit e90f0ce4aea5732fc26c2c89892ecd1e6be815ba
+|/  Author: omar <muhammad@email.com>
+|   Date:   Mon Nov 4 09:06:14 2024 +0200
+|
+|       C
+|
+* commit 8688d81c1c1c0ec21dc5eb6e89aad28da8620479
+  Author: omar <muhammad@email.com>
+  Date:   Mon Nov 4 08:51:08 2024 +0200
+
+      A
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+User@Admin MINGW
