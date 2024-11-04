@@ -1,0 +1,139 @@
+Microsoft Windows [Version 10.0.22631.4037]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\loving-git>git add tribute.md
+
+E:\loving-git>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   tribute.md
+
+
+E:\loving-git>git commit -m "A. "
+[master (root-commit) 2d23955] A.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tribute.md
+
+E:\loving-git>git commit
+On branch master
+nothing to commit, working tree clean
+
+E:\loving-git>git status
+On branch master
+nothing to commit, working tree clean
+
+E:\loving-git>git branch improvisitation
+
+E:\loving-git>git checkout improvisitation
+Switched to branch 'improvisitation'
+
+E:\loving-git>git commit -m "B"
+On branch improvisitation
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   tribute.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\loving-git>git add tribute.md
+
+E:\loving-git>git commit -m "B"
+[improvisitation 5086a52] B
+ 1 file changed, 6 insertions(+)
+
+E:\loving-git>git status
+On branch improvisitation
+nothing to commit, working tree clean
+
+E:\loving-git>git ckeckout master
+git: 'ckeckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+E:\loving-git>git checkout master
+Switched to branch 'master'
+
+E:\loving-git>gitn add tribute.md
+'gitn' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\loving-git>git add tribute.md
+
+E:\loving-git>git commit -m "C"
+[master eeeb5bc] C
+ 1 file changed, 6 insertions(+)
+
+E:\loving-git>git merge improvisitation
+Auto-merging tribute.md
+CONFLICT (content): Merge conflict in tribute.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+E:\loving-git>git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+E:\loving-git>git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+E:\loving-git>git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   tribute.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\loving-git>git merge --abort
+
+E:\loving-git>git merge improvisitation
+Auto-merging tribute.md
+CONFLICT (content): Merge conflict in tribute.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+E:\loving-git>git add tribute.md
+
+E:\loving-git>git commit
+[master beed7a0] Merge branch 'improvisitation'
+
+E:\loving-git>git log --graph --all
+*   commit beed7a0d7dd22925d184754ddf4ac99878801cc2 (HEAD -> master)
+|\  Merge: eeeb5bc 5086a52
+| | Author: John Doe <johndoe@example.com>
+| | Date:   Sun Nov 3 23:18:01 2024 -0800
+| |
+| |     Merge branch 'improvisitation'
+| |
+| * commit 5086a52bae47cab60960c617442b13731912853b (improvisitation)
+| | Author: John Doe <johndoe@example.com>
+| | Date:   Sun Nov 3 22:56:49 2024 -0800
+| |
+| |     B
+| |
+* | commit eeeb5bcf4d94eb0ad3a4dfb585ef56ac48a43c04
+|/  Author: John Doe <johndoe@example.com>
+|   Date:   Sun Nov 3 23:05:12 2024 -0800
+|
+|       C
+|
+* commit 2d239553eb2923d635ce34508e6c770f4e6738a3
+  Author: John Doe <johndoe@example.com>
+  Date:   Sun Nov 3 22:50:11 2024 -0800
+
+      A.
+
+E:\loving-git>^A^A
